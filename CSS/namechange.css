@@ -19,6 +19,7 @@
 
 }
 .namechange form{
+
     margin: 30px;
     font-size: 22px;
 
@@ -32,6 +33,7 @@
 
     border: 1px solid black;
     padding-left: 20px;
+        border-radius: 4px;
 }
 
 body .dimmed{

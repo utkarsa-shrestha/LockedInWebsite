@@ -16,12 +16,14 @@ const remove =() =>{
         overlay.classList.remove('active', 'closing'); //removing the dimming effect
     }, 300);
 }
-
+console.log(localStorage.getItem('Name'));
 const changename = () =>{
     let name = document.querySelector('.namechangeinput').value;
+    localStorage.setItem('Name', name)
+    
     let namedisplaysection = document.querySelector('.name');
 
-    namedisplaysection.textContent = name;
+    namedisplaysection.textContent = localStorage.getItem('Name');
     
     let namechangesection = document.querySelector('.namechange');
     namechangesection.style.display = 'none'; //removing the panel
@@ -30,3 +32,7 @@ const changename = () =>{
         overlay.classList.remove('active', 'closing'); //removing the dimming effect
     }, 300);
 } 
+
+let namedisplaysection = document.querySelector('.name');
+
+namedisplaysection.textContent = localStorage.getItem('Name');

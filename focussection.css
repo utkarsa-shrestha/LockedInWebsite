@@ -1,0 +1,98 @@
+.focussection{
+
+    height: 100%;
+    width: 75%;
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    border-radius: 10px;
+
+}
+.focussection.atfullscreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+     width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    z-index: 1000;
+}
+.focussection{
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+}
+.stopwatchsection{
+    height: 300px;
+    font-size: 50px;
+
+    display: flex;
+    gap: 20px;
+
+    padding: 0px;
+    margin: 0px;
+    
+}
+.function{
+    display: flex;
+    gap: 70px;
+
+    margin-top: -90px;
+    
+}
+.function button{
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.5s ease;
+}
+#start{
+    color: #003049;
+}
+#end{
+    color: #780000;
+}
+
+#start:hover, #end:hover{
+    transform: translateY(-5px);
+}
+#start:active, #end:active{
+    transform: translateY(0px);
+}
+.maximize{
+    width: 30px;
+
+    cursor: pointer;
+
+    position: relative;
+    top: -65%;
+    right: -45%;
+}
+.minimize{
+    
+    width: 30px;
+
+    cursor: pointer;
+
+    position: relative;
+    top: -65%;
+    right: -45%;
+
+    display: none;
+}
