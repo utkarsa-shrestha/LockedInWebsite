@@ -27,6 +27,7 @@
 .namechange form input{
     font-size: 20px;
 
+    width: 300px;
     margin-top: 10px;
 
     border: 1px solid black;

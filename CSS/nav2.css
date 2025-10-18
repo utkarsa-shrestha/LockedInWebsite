@@ -1,0 +1,23 @@
+.nav2{
+    height: 100%;
+
+    background-color: white;
+
+    width: 25%;
+
+    z-index: 100;
+}
+.nav2 a{
+    text-decoration: none;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+
+    padding-left: 40px;
+
+    padding-top: 10px;
+
+}
