@@ -53,6 +53,8 @@
                 <a href="tasksection.html">Tasks</a><hr>
                 <a href="completedtasksection.html">Completed tasks</a><hr>
                 <a href="FocusSection.html">Focus</a><hr>
+
+                <div class="divclear"><button class="cleardata">Clear data</button></div>
         </nav>
         <!--For name changing feature-->
         <div class="overview">
@@ -70,12 +72,13 @@
         <!--The Focus Section-->
         <div class="focussection">
             <div class="stopwatchsection">
-                <h1>00</h1>
-                <h1>00</h1>
+                <h1 id="minute">00</h1><h1>:</h1>
+                <h1 id="second">00</h1>
             </div>
             <div class="function">
-                <button id="start">Start</button>
-                <button id="end">End</button>
+                <button id="start" onclick="startfunction(); ">Start</button>
+                <button id="pause" onclick="pausefunction();">Pause</button>
+                <button id="end" onclick="endfunction();">End</button>
             </div>
             <img src="Images/share.png" alt="" class="maximize">
             <img src="Images/minimize-sign.png" alt="" class="minimize">
@@ -84,6 +87,7 @@
     <!--Script calling space:-->
     <script src="JavaScript/namechange.js"></script>
     <script src="JavaScript/maximize.js"></script>
-    <script src=""></script>
+    <script src="JavaScript/stopwatch.js"></script>
+    <script src="JavaScript/cleardata.js"></script>
 </body>
 </html>

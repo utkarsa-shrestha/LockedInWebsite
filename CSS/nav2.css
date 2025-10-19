@@ -1,11 +1,12 @@
 .nav2{
     height: 100%;
 
-    background-color: white;
+    background-color: rgb(233, 233, 233);
 
     width: 25%;
 
     z-index: 100;
+    transition: 0.5s ease;
 }
 .nav2 a{
     text-decoration: none;
@@ -20,4 +21,25 @@
 
     padding-top: 10px;
 
+}
+.cleardata{
+    color: gray;
+    border: none;
+
+    font-size: 20px;
+    background-color: rgb(233, 233, 233);
+
+    text-align: end;
+    padding-right: 30px;
+    margin-top: 120%;
+    cursor: pointer;
+}
+.cleardata:hover{
+    text-decoration: underline;
+}
+.cleardata:active{
+    opacity: 0.8;
+}
+hr{
+    width: 300px;
 }

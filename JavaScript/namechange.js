@@ -1,4 +1,4 @@
-const namesection = document.querySelector('.name');
+const namesection = document.querySelector('.pfp');
 const overlay = document.querySelector('.overview')
 
 namesection.addEventListener('click', ()=>{

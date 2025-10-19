@@ -1,5 +1,7 @@
 .focussection{
 
+
+
     height: 100%;
     width: 75%;
     background-image: url('img.jpg');
@@ -10,6 +12,10 @@
 
     border-radius: 10px;
 
+    transition: 0.3s ease;
+
+    float: left;
+
 }
 .focussection.atfullscreen{
     position: fixed;
@@ -19,6 +25,7 @@
     height: 100vh;
     border-radius: 0;
     z-index: 1000;
+    position: fixed;
 }
 .focussection{
     color: white;
@@ -62,17 +69,20 @@
 
     transition: 0.5s ease;
 }
-#start{
+#start, #pause{
     color: #003049;
 }
 #end{
     color: #780000;
 }
+#pause{
+    display: none;
+}
 
-#start:hover, #end:hover{
+#start:hover, #end:hover, #pause:hover{
     transform: translateY(-5px);
 }
-#start:active, #end:active{
+#start:active, #end:active, #pause:active{
     transform: translateY(0px);
 }
 .maximize{
