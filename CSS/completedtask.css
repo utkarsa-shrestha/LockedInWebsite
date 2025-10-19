@@ -1,0 +1,22 @@
+.completedsection{
+    height: 95%;
+    width: 75%;
+    float: left;
+
+    margin: 10px;
+    border-radius: 5px;
+
+    border: 10px solid white ;
+    background-color: white;
+}
+.focusedtimedisplaysection{
+    margin: 0px;
+    padding: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+.focusedtimedisplaysection h1{
+    font-size: 40px;
+    color: #C1121F;
+}

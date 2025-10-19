@@ -22,11 +22,17 @@
 
             margin-top: -20px;
         }
+        .main{
+            display: flex;
+
+            height: 100%;
+        }
     </style>
     <!--CSS link section-->
     <link rel="stylesheet" href="CSS/nav1.css">
     <link rel="stylesheet" href="CSS/nav2.css">
     <link rel="stylesheet" href="CSS/namechange.css">
+    <link rel="stylesheet" href="CSS/completedtask.css">
 </head>
 <body>
     <!--Navigation space-->
@@ -41,31 +47,41 @@
         </div>
     </nav>
 
-    <!--Navigation bar 2-->
-    <nav class="nav2" id="nav2">
-            <a href="tasksection.html">Tasks</a><hr>
-            <a href="completedtasksection.html">Completed tasks</a><hr>
-            <a href="FocusSection.html">Focus</a><hr>
-
-            <div class="divclear"><button class="cleardata">Clear data</button></div>
-
-        </nav>
-
-    <!--For name changing feature-->
-    <div class="overview">
-    <div class="namechange">
-        <form action="">
-            <label for="namechange" class="namechangetxt">Enter your name</label><br>   
-            <input type="text" name="namechange" class="namechangeinput" placeholder="User">
-        </form>
-        <div class="confirm">
-            <button class="okay" onclick="changename()">Okay</button>
-            <button class="cancel" onclick="remove()">Cancel</button>
+    <div class="main">
+        <!--Navigation bar 2-->
+        <nav class="nav2" id="nav2">
+                <div class="hrefsection">
+                    <a href="tasksection.html">Tasks</a><hr>
+                    <a href="completedtasksection.html">Completed tasks</a><hr>
+                    <a href="FocusSection.html">Focus</a><hr>
+                </div>
+                <div class="divclear"><button class="cleardata">Clear data</button></div>
+            </nav>
+        <!--For name changing feature-->
+        <div class="overview">
+        <div class="namechange">
+            <form action="">
+                <label for="namechange" class="namechangetxt">Enter your name</label><br>
+                <input type="text" name="namechange" class="namechangeinput" placeholder="User">
+            </form>
+            <div class="confirm">
+                <button class="okay" onclick="changename()">Okay</button>
+                <button class="cancel" onclick="remove()">Cancel</button>
+            </div>
         </div>
+        </div>
+        <!--Main section-->
+            <div class="completedsection">
+                <div class="focusedtimedisplaysection">
+                    <h1 class="timetxt">Focused Total:</h1>
+                    <h1 class="time">0hr</h1>
+                </div>
+            </div>
     </div>
-    </div>
+
     <!--Script calling space:-->
     <script src="JavaScript/namechange.js"></script>
     <script src="JavaScript/cleardata.js"></script>
+    <script src="JavaScript/focustime.js"></script>
 </body>
 </html>

@@ -55,7 +55,7 @@ const startfunction = () =>{ //function to start the stopwatch
         totalminuteinside =  minute; //total minute calculation
         totalsecondinside =  second; //total second calculation
         
-        }, 10)
+        }, 1000)
 
        
 

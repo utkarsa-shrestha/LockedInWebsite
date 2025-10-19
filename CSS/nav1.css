@@ -8,7 +8,7 @@
 
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid rgb(201, 201, 201);
 
     display: flex;
 
@@ -38,9 +38,13 @@
     
 }
 .userdata .name{
-    font-size: 25px;
+    font-size: 20px;
+
+    margin-top: 20px;
 
     font-weight: normal;
+    color: #669BBC;
+
     padding: 15px;
     padding-left: 40px;
 

@@ -5,8 +5,12 @@
 
     width: 25%;
 
-    z-index: 100;
+    z-index: 0;
     transition: 0.5s ease;
+
+    
+
+    border-right: 1px solid rgb(201, 201, 201);
 }
 .nav2 a{
     text-decoration: none;
@@ -21,9 +25,19 @@
 
     padding-top: 10px;
 
+
+}
+.hrefsection{
+    background-color: white;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .cleardata{
-    color: gray;
+    color: #C1121F;
     border: none;
 
     font-size: 20px;
@@ -31,7 +45,7 @@
 
     text-align: end;
     padding-right: 30px;
-    margin-top: 120%;
+    margin-top: 110%;
     cursor: pointer;
 }
 .cleardata:hover{
@@ -41,5 +55,5 @@
     opacity: 0.8;
 }
 hr{
-    width: 300px;
+    width: 90%;
 }
