@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="CSS/nav1.css">
     <link rel="stylesheet" href="CSS/nav2.css">
     <link rel="stylesheet" href="CSS/namechange.css">
+    <link rel="stylesheet" href="CSS/tasksection.css">
 </head>
 <body>
     
@@ -69,6 +70,29 @@
                 <button class="cancel" onclick="remove()">Cancel</button>
             </div>
         </div>
+        </div>
+
+        <div class="tasksection">
+            <h1 class="todaytxt">Today</h1>
+
+
+            <div class="taskenteranddisplaysection">
+                <form action="">
+                    <input type="text" placeholder="Enter a Task" name="entertask" id="entertask">
+                </form>
+
+                <div class="actualdisplaysection">
+                    <p>Task:</p>
+                    <div class="task">
+                        <input type="radio" name="Complete" id="complete">
+                        <div class="taskinfo">Task this task that task here task there</div>
+                        <div class="edit">
+                            <div class="edittask"><img src="Images/edit.png" alt="" class="editicon"></div>
+                            <div class="removetask"><img src="Images/remove.png" alt="" class="removeicon"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!--Script calling space:-->

@@ -1,3 +1,8 @@
 let totaltimeinseconds = localStorage.getItem('Timefocused')
 
-document.querySelector('.time').textContent = Math.round(parseInt(totaltimeinseconds)/3600) + 'hr';
+if(totaltimeinseconds < 3600){
+    document.querySelector('.time').textContent = Math.round(parseInt(totaltimeinseconds)/60) + 'min';
+}
+else{
+    document.querySelector('.time').textContent = Math.round(parseInt(totaltimeinseconds)/3600) + 'hr';
+}
