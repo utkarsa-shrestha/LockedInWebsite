@@ -23,7 +23,13 @@
 
     color: #780000;
 }
-
+.todaytxt{
+    color: #003049;
+}
+/* .entersection{
+    display: flex;
+    width: 95%;
+} */
 #entertask{
     width: 98%;
     
@@ -34,6 +40,23 @@
     border-radius: 10px;
     
     background-color: white;
+}
+.submit{
+    font-size: 20px;
+    padding: 10px;
+    border:none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    color: white;
+
+    background-color: #003049;
+
+    position: relative;
+    top: -43px;
+    left: 93%;
+
+    cursor: pointer;
 }
 .task{
     margin-top: 30px;
@@ -78,4 +101,9 @@
 }
 .edit img{
     cursor: pointer;
+}
+.removetask{
+    padding: 0px;
+    background-color: white;
+    border: none;
 }

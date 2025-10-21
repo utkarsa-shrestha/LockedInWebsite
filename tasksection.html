@@ -77,20 +77,15 @@
 
 
             <div class="taskenteranddisplaysection">
-                <form action="">
-                    <input type="text" placeholder="Enter a Task" name="entertask" id="entertask">
-                </form>
+                <div class="entersection">
+                    <form action="">
+                        <input type="text" placeholder="Enter a Task" name="entertask" id="entertask">
+                    </form>
+                    <button class="submit">Submit</button>
+                </div>
 
                 <div class="actualdisplaysection">
                     <p>Task:</p>
-                    <div class="task">
-                        <input type="radio" name="Complete" id="complete">
-                        <div class="taskinfo">Task this task that task here task there</div>
-                        <div class="edit">
-                            <div class="edittask"><img src="Images/edit.png" alt="" class="editicon"></div>
-                            <div class="removetask"><img src="Images/remove.png" alt="" class="removeicon"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -98,5 +93,6 @@
     <!--Script calling space:-->
     <script src="JavaScript/namechange.js"></script>
     <script src="JavaScript/cleardata.js"></script>
+    <script src="JavaScript/appendtask.js"></script>
 </body>
 </html>
