@@ -5,6 +5,7 @@ let second;
 
 let totaltimeinsecond = 0;
 
+
 let totalminuteinside = 0; 
 let totalsecondinside = 0;
 
