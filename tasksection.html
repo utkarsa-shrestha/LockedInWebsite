@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="CSS/nav2.css">
     <link rel="stylesheet" href="CSS/namechange.css">
     <link rel="stylesheet" href="CSS/tasksection.css">
+    <link rel="stylesheet" href="CSS/edittask.css">
 </head>
 <body>
     
@@ -87,12 +88,24 @@
                 <div class="actualdisplaysection">
                     <p id="taskdisplay">Task:</p>
                 </div>
+
+                
             </div>
+            
         </div>
+        <!-- <div class="edittasksection">
+            <h1>Edit the edited task</h1> 
+            <input type="text" name="taskedit" id="taskedit">
+            <div class="confirm">
+                <button class="okay" onclick="taskedit()" id="editokay">Okay</button>
+                <button class="cancel" onclick="closeedit()">Cancel</button>
+            </div>
+        </div> -->
     </div>
     <!--Script calling space:-->
     <script src="JavaScript/namechange.js"></script>
     <script src="JavaScript/cleardata.js"></script>
     <script src="JavaScript/appendtask.js"></script>
+    <script src="JavaScript/edit.js"></script>
 </body>
 </html>

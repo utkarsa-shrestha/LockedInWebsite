@@ -43,7 +43,7 @@ body .dimmed{
 .confirm{
     display: flex;
 }
-.confirm button{
+.confirm button, .edittasksection button{
     font-size: 25px;
     cursor: pointer;
 
@@ -66,7 +66,14 @@ body .dimmed{
     padding-left: 20px;
     padding-right: 20px;
 }
+.confirm .cancel{
+    border-radius: 5px;
 
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: 1px solid black;
+}
 .overview{
     display: none;
     position: fixed;
@@ -105,7 +112,7 @@ body .dimmed{
             }
         }
 
-        .overview.active .namechange {
+        .overview.active .namechange ,.overview.active  .edittasksection {
             animation: slideUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
@@ -121,7 +128,7 @@ body .dimmed{
             }
         }
 
-        .overview.closing .namechange {
+        .overview.closing .namechange,.overview.closing .edittasksection {
             animation: slideDown 0.3s ease-in;
         }
 

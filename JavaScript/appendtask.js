@@ -17,16 +17,10 @@ let taskno = 1
 const removetask = (taskno) => {
     document.getElementById(taskno).remove()
     localStorage.removeItem('taskn'+taskno)
+    localStorage.removeItem('editedvalue'+taskno)
     localStorage.setItem('totaltask', parseInt(localStorage.getItem('totaltask')) - 1) 
 }
 
-//function to edit task
-const edittask =  (taskno)=>{
-
-    
-    overlay.classList.remove('closing');
-    overlay.classList.add('active');
-}
 //function to append the task
 
 
@@ -85,17 +79,16 @@ submit.addEventListener('click', ()=>{
     localStorage.setItem('taskn'+taskno, taskn.outerHTML)
     localStorage.setItem('totaltask', taskno)
 
-    
-    
-
     taskno++
-
    
 })
 
 for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
     let savedtask = document.createElement('div')
-        savedtask.setAttribute('class', 'task' + i)
-        document.querySelector('.actualdisplaysection').append(savedtask)
-        savedtask.innerHTML = localStorage.getItem(('taskn'+ i))
+    savedtask.setAttribute('class', 'task' + i)
+    document.querySelector('.actualdisplaysection').append(savedtask)
+    savedtask.innerHTML = localStorage.getItem(('taskn'+ i))
+    if(localStorage.getItem('editedvalue'+i)){
+    document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
     }
+}

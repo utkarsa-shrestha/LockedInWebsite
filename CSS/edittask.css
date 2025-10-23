@@ -1,0 +1,40 @@
+.edittasksection{
+    background-color: white ;   
+    width: 400px;
+    height: 200px; 
+    
+
+    border-radius: 30px;
+    flex-direction: column;
+
+    color: #003049;
+
+    border: 2px solid #003049;
+    z-index: 100;
+    
+    position: absolute;
+    top: 25%;
+    left: 36%;
+
+    padding-left: 40px;
+}
+.edittasksection h1{
+    padding: 0px;
+    margin-bottom: 10px;
+}
+#taskedit{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding: 5px;
+    width: 90%;
+    height: 14%;
+
+    font-size: 25px;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+
+    border: 1px solid black;
+}
