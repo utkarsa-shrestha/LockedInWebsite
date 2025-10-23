@@ -107,14 +107,6 @@ const endfunction = () =>{
     localStorage.setItem('Timefocused', totaltimeinsecond)
 
     console.log(totalsecondoutside)
-    // console.log(localStorage.getItem('Timefocused'))
-
-    //To store focuesd time today;
-
-    
-
-    
-
 
 }
 

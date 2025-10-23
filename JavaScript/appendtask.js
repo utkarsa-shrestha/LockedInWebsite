@@ -19,10 +19,20 @@ const removetask = (taskno) => {
     localStorage.removeItem('taskn'+taskno)
     localStorage.setItem('totaltask', parseInt(localStorage.getItem('totaltask')) - 1) 
 }
+
+//function to edit task
+const edittask =  (taskno)=>{
+
+    
+    overlay.classList.remove('closing');
+    overlay.classList.add('active');
+}
 //function to append the task
 
 
 submit.addEventListener('click', ()=>{
+    document.querySelector('#taskdisplay').style.display = 'block';
+
     let taskn = document.createElement('div')
     taskn.setAttribute('id', 'task' + taskno)
 
@@ -39,9 +49,12 @@ submit.addEventListener('click', ()=>{
 
     let edit = document.createElement('div') //append to task
     taskinfo.setAttribute('class', 'taskinfo')
-
-    let edittask = document.createElement('div') //append to edit
     edit.setAttribute('class', 'edit')
+
+    let edittask = document.createElement('button') //append to edit
+    edittask.setAttribute('class', 'edittask')
+    edittask.setAttribute('value', taskno)
+    edittask.setAttribute('onclick', 'edittask(value)')
 
     let editicon = document.createElement('img') //append to edittask
     editicon.setAttribute('class', 'editicon')
