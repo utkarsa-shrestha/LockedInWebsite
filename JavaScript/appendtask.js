@@ -21,6 +21,9 @@ submit.addEventListener('click', ()=>{
     let complete = document.createElement('input') //append to task
     complete.setAttribute('class', 'complete')
     complete.setAttribute('type', 'radio')
+    complete.setAttribute('name', 'remove')
+    complete.setAttribute('onclick', 'completecheck(value)')
+    complete.setAttribute('value', taskno)
 
     let taskinfo = document.createElement('div') //append to task
     taskinfo.setAttribute('class', 'taskinfo')
