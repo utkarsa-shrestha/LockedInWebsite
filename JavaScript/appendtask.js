@@ -1,30 +1,14 @@
 const input = document.querySelector('#entertask');
 const submit = document.querySelector('.submit');
 
-input.addEventListener('keypress', (event)=>{
-    if(event == 'Enter'){
-        console.log('remove')
-        event.preventDefault();
-    }
-})
-
-let taskno = 1
-
-//defining all of the elements
-
-
-//function to remove task
-const removetask = (taskno) => {
-    document.getElementById(taskno).remove()
-    localStorage.removeItem('taskn'+taskno)
-    localStorage.removeItem('editedvalue'+taskno)
-    localStorage.setItem('totaltask', parseInt(localStorage.getItem('totaltask')) - 1) 
-}
+let taskno = 1 //by default, taskno is 1 which is incremented after every addition 
 
 //function to append the task
 
 
 submit.addEventListener('click', ()=>{
+    //defining all of the elements
+
     document.querySelector('#taskdisplay').style.display = 'block';
 
     let taskn = document.createElement('div')
@@ -63,8 +47,10 @@ submit.addEventListener('click', ()=>{
     removeicon.setAttribute('class', 'removeicon')
     removeicon.setAttribute('src', 'Images/remove.png')
 
-     let taskvalue = input.value
+     let taskvalue = input.value //value to enter as a new task
      taskinfo.textContent = taskvalue;
+
+    //append section
 
      document.querySelector('.actualdisplaysection').append(taskn)
      taskn.append(task)
@@ -75,20 +61,22 @@ submit.addEventListener('click', ()=>{
      edittask.append(editicon)
      edit.append(removetask)
      removetask.append(removeicon)
-    // localStorage.setItem('task'+taskno, taskn.innerHTML)
     localStorage.setItem('taskn'+taskno, taskn.outerHTML)
     localStorage.setItem('totaltask', taskno)
 
+    //incremented of taskno
     taskno++
    
 })
 
+//so that the tasks still stay even after a reload or afer closing and reopen
 for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
     let savedtask = document.createElement('div')
     savedtask.setAttribute('class', 'task' + i)
     document.querySelector('.actualdisplaysection').append(savedtask)
     savedtask.innerHTML = localStorage.getItem(('taskn'+ i))
-    if(localStorage.getItem('editedvalue'+i)){
-    document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
+
+    if(localStorage.getItem('editedvalue'+i)){ //so that the edited value stays even after reload
+        document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
     }
 }

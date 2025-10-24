@@ -12,10 +12,6 @@ let totalsecondinside = 0;
 let totalminuteoutside = 0;
 let totalsecondoutside = 0
 
-let today = new Date();
-let yesteday = new Date(today);
-yesteday.setDate(today.getDate() - 1); //get yesterday's date
-localStorage.setItem('yesteday', yesteday)
 
 const startbut = document.querySelector('#start');
 const endbut = document.querySelector('#end')
@@ -109,6 +105,3 @@ const endfunction = () =>{
     console.log(totalsecondoutside)
 
 }
-
-
-

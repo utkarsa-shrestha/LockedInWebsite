@@ -4,23 +4,50 @@
     float: left;
 
     margin: 10px;
-    border-radius: 5px;
-
-    border: 10px solid white ;
+}
+.infosection{
     background-color: white;
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20%;
 }
 .focusedtimedisplaysection{
     margin: 0px;
     padding: 20px;
 
+    padding-left: 70px;
+
     display: flex;
-    gap: 20px;
+    flex-direction:column ;
+
+    align-items: center;
 }
-.focusedtimedisplaysection h1{
-    font-size: 40px;
+.taskleftsection{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.taskcompleted{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+.focusedtimedisplaysection h1, .taskleftsection h1, .taskcompleted h1{
+    font-size: 30px;
     color: #C1121F;
     margin: 0px;
     padding: 0px;
+}
+.completedtaskdisplaysection{
+    padding: 20px;
+}
+.completedtaskdisplaysection p{
+    color: #003049;
 }
 
     

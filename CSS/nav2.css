@@ -47,6 +47,8 @@
     padding-right: 30px;
     margin-top: 100%;
     cursor: pointer;
+
+    transition: none;
 }
 .cleardata:hover{
     text-decoration: underline;
