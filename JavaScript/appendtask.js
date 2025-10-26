@@ -1,7 +1,13 @@
 const input = document.querySelector('#entertask');
 const submit = document.querySelector('.submit');
+let taskno;
+if(!localStorage.getItem('totaltask') ){
+    taskno = 1; 
+}
+else{
+    taskno = localStorage.getItem('totaltask')
+}
 
-let taskno = 1 //by default, taskno is 1 which is incremented after every addition 
 
 //function to append the task
 
@@ -74,6 +80,7 @@ submit.addEventListener('click', ()=>{
 
 //so that the tasks still stay even after a reload or afer closing and reopen
 for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
+    if(localStorage.getItem('taskn'+i)){
     let savedtask = document.createElement('div')
     savedtask.setAttribute('class', 'task' + i)
     document.querySelector('.actualdisplaysection').append(savedtask)
@@ -81,5 +88,6 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
 
     if(localStorage.getItem('editedvalue'+i)){ //so that the edited value stays even after reload
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
+    }
     }
 }
