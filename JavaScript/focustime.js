@@ -12,13 +12,9 @@ else if(!localStorage.getItem('Timefocused')){
     document.querySelector('.time').textContent = '0min'
 }
 
-if(localStorage.getItem('totaltask')){
-    let totaltask = localStorage.getItem('totaltask')
-    let taskleft;
-    for(taskleft=1; taskleft<= parseInt(totaltask); taskleft++){
-    console.log(taskleft)
-    }
-    document.querySelector('.taskno').textContent = taskleft  - 1;
+if(localStorage.getItem('taskleft')){
+    let taskleft = localStorage.getItem('taskleft')
+    document.querySelector('.taskno').textContent = taskleft;
 }
 
 if(localStorage.getItem('completedtaskno')){

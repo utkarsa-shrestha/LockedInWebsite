@@ -8,16 +8,25 @@ else{
 
 const completecheck = (taskno) =>{
     setTimeout(()=>{
-        localStorage.setItem('completed'+taskno, localStorage.getItem('taskn'+taskno))
+        let completedtask = localStorage.getItem('taskn'+taskno)
+        localStorage.setItem('completed'+taskno, completedtask)
         //to remove the task from remove
         document.getElementById(taskno).remove()
+        document.getElementById('task' + taskno).remove()
+        document.querySelector('.task'+taskno).remove()
         localStorage.removeItem('taskn'+taskno)
-        localStorage.removeItem('editedvalue'+taskno)
-        localStorage.setItem('totaltask', parseInt(localStorage.getItem('totaltask')) - 1)
-        
         localStorage.setItem('completedtaskno', completedtaskno)
         
+        
+
         ++completedtaskno;
+
+          let amount = document.querySelector('.actualdisplaysection').childElementCount ;
+
+        console.log(amount)
+
+        localStorage.setItem('taskleft', amount - 1)
+   
         
     }, 100)
 }

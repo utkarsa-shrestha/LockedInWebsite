@@ -27,9 +27,8 @@ submit.addEventListener('click', ()=>{
     let complete = document.createElement('input') //append to task
     complete.setAttribute('class', 'complete')
     complete.setAttribute('type', 'radio')
-    complete.setAttribute('name', 'remove')
-    complete.setAttribute('onclick', 'completecheck(value)')
     complete.setAttribute('value', taskno)
+    complete.setAttribute('onclick', 'completecheck(value)' )
 
     let taskinfo = document.createElement('div') //append to task
     taskinfo.setAttribute('class', 'taskinfo')
@@ -75,12 +74,18 @@ submit.addEventListener('click', ()=>{
 
     //incremented of taskno
     taskno++
+
+    let amount = document.querySelector('.actualdisplaysection').childElementCount ;
+
+    console.log(amount)
+
+    localStorage.setItem('taskleft', amount - 1)
+    
    
 })
 
 //so that the tasks still stay even after a reload or afer closing and reopen
 for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
-    if(localStorage.getItem('taskn'+i)){
     let savedtask = document.createElement('div')
     savedtask.setAttribute('class', 'task' + i)
     document.querySelector('.actualdisplaysection').append(savedtask)
@@ -89,5 +94,7 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
     if(localStorage.getItem('editedvalue'+i)){ //so that the edited value stays even after reload
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
     }
-    }
 }
+
+//to check the amount of elements inside actualdisplaysection
+

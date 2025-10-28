@@ -34,7 +34,8 @@ const edittask =  (taskno)=>{
     edittasksection.append(confirm)
     confirm.append(okay)
     confirm.append(cancel)
-
+     overlay.classList.remove('closing');
+    overlay.classList.add('active'); //adding the dimming effect
     localStorage.setItem('Task to edit', taskno)
 }
 
