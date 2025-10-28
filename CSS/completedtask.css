@@ -50,4 +50,61 @@
     color: #003049;
 }
 
+
+/* for completed task */
+
+.task{
+    margin-top: 30px;
+
+    width: 98%;
+    
+    padding: 10px;
+    padding-left: 20px;
+    border:none;
+    border-radius: 10px;
+    
+    background-color: white;
+
+    display: flex;
+    gap: 20px;
+
+    color: rgb(95, 95, 95);
+
+    border: 1px solid green;
+
+}
+#complete{
+    margin: 0px;
+
+    
+}
+.edit{
+    display: flex;
+    gap: 20px;
+
+    padding: 0px;
+    margin: 0px;
+
+    height: 120%;
+
+   
+}
+.taskinfo{
+    width: 85%;
+
+    padding: 0px;
+    margin-top: 4px;
+}
+.editicon, .removeicon{
+    width: 20px;
+}
+.edit img{
+    cursor: pointer;
+}
+.removetask, .edittask{
+    padding: 0px;
+    background-color: white;
+    border: none;
+}
+
     

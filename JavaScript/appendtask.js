@@ -1,7 +1,13 @@
 const input = document.querySelector('#entertask');
 const submit = document.querySelector('.submit');
+let taskno;
+if(!localStorage.getItem('totaltask') ){
+    taskno = 1; 
+}
+else{
+    taskno = localStorage.getItem('totaltask')
+}
 
-let taskno = 1 //by default, taskno is 1 which is incremented after every addition 
 
 //function to append the task
 
@@ -21,6 +27,8 @@ submit.addEventListener('click', ()=>{
     let complete = document.createElement('input') //append to task
     complete.setAttribute('class', 'complete')
     complete.setAttribute('type', 'radio')
+    complete.setAttribute('value', taskno)
+    complete.setAttribute('onclick', 'completecheck(value)' )
 
     let taskinfo = document.createElement('div') //append to task
     taskinfo.setAttribute('class', 'taskinfo')
@@ -66,6 +74,13 @@ submit.addEventListener('click', ()=>{
 
     //incremented of taskno
     taskno++
+
+    let amount = document.querySelector('.actualdisplaysection').childElementCount ;
+
+    console.log(amount)
+
+    localStorage.setItem('taskleft', amount - 1)
+    
    
 })
 
@@ -80,3 +95,6 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
     }
 }
+
+//to check the amount of elements inside actualdisplaysection
+
