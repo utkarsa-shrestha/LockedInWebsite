@@ -14,10 +14,10 @@ else if(!localStorage.getItem('Timefocused')){
 
 if(localStorage.getItem('taskleft')){
     let taskleft = localStorage.getItem('taskleft')
-    document.querySelector('.taskno').textContent = taskleft;
+    document.querySelector('.taskno').textContent = 'XX';
 }
 
 if(localStorage.getItem('completedtaskno')){
     let completedtaskno = localStorage.getItem('completedtaskno')
-    document.querySelector('.completedtask').textContent = completedtaskno;
+    document.querySelector('.completedtask').textContent = 'XX';
 }

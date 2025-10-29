@@ -2,7 +2,6 @@ const maximizebutton = document.querySelector('.maximize')
 const minimizebutton = document.querySelector('.minimize')
 
 maximizebutton.addEventListener('click', ()=>{
-    console.log('Inside of maximize function')
 
     //to hide other elements
     document.querySelector('.nav1').style.display = 'none';
@@ -13,11 +12,9 @@ maximizebutton.addEventListener('click', ()=>{
     let mainsection = document.querySelector('.focussection')
     mainsection.classList.toggle('atfullscreen')
 
-    console.clear()
 })
 
 minimizebutton.addEventListener('click', ()=>{
-    console.log('Inside of minimize function')
 
     //to display other elements
     document.querySelector('.nav1').style.display = 'flex';

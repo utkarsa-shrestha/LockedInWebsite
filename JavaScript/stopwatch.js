@@ -102,6 +102,5 @@ const endfunction = () =>{
 
     localStorage.setItem('Timefocused', totaltimeinsecond)
 
-    console.log(totalsecondoutside)
 
 }

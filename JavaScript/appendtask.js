@@ -2,7 +2,7 @@ const input = document.querySelector('#entertask');
 const submit = document.querySelector('.submit');
 let taskno;
 if(!localStorage.getItem('totaltask') ){
-    taskno = 1; 
+    taskno = 0; 
 }
 else{
     taskno = localStorage.getItem('totaltask')
@@ -13,6 +13,8 @@ else{
 
 
 submit.addEventListener('click', ()=>{
+    //incremented of taskno
+    ++taskno
     //defining all of the elements
 
     document.querySelector('#taskdisplay').style.display = 'block';
@@ -72,15 +74,15 @@ submit.addEventListener('click', ()=>{
     localStorage.setItem('taskn'+taskno, taskn.outerHTML)
     localStorage.setItem('totaltask', taskno)
 
-    //incremented of taskno
-    taskno++
+    
 
     let amount = document.querySelector('.actualdisplaysection').childElementCount ;
 
-    console.log(amount)
+
 
     localStorage.setItem('taskleft', amount - 1)
     
+    window.location.reload()
    
 })
 
