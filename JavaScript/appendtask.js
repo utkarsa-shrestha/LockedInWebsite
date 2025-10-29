@@ -77,8 +77,6 @@ submit.addEventListener('click', ()=>{
 
     let amount = document.querySelector('.actualdisplaysection').childElementCount ;
 
-    console.log(amount)
-
     localStorage.setItem('taskleft', amount - 1)
     
    

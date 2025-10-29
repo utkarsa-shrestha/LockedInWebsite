@@ -13,7 +13,6 @@ maximizebutton.addEventListener('click', ()=>{
     let mainsection = document.querySelector('.focussection')
     mainsection.classList.toggle('atfullscreen')
 
-    console.clear()
 })
 
 minimizebutton.addEventListener('click', ()=>{

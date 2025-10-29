@@ -2,7 +2,6 @@
 const clearbtn = document.querySelector('.cleardata')
 
 clearbtn.addEventListener('click', ()=>{
-    console.log("inside clear section")
     let confirmation = confirm("Are you sure you want to clear the data?")
 
     if(confirmation == true){
