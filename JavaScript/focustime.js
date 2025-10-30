@@ -17,11 +17,6 @@ if(localStorage.getItem('taskleft')){
     document.querySelector('.taskno').textContent = localStorage.getItem('taskleft');
 }
 
-// if(localStorage.getItem('completedtaskno')){
-//     let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
-//     if(completedcount != 0){
-//     document.querySelector('.completedtask').textContent = completedcount;
-
-//     // window.location.reload()
-//     }
-// }
+if(localStorage.getItem('completedtask')){
+    document.querySelector('.completedtask').textContent = localStorage.getItem('completedtask')
+}

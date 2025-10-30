@@ -1,10 +1,5 @@
 let completedtaskno;
-if(!localStorage.getItem('completedtaskno')){
-    completedtaskno = 1;
-}
-else{
-    completedtaskno = localStorage.getItem('completedtaskno')
-}
+
 
 const completecheck = (taskno) =>{
     setTimeout(()=>{
@@ -14,9 +9,13 @@ const completecheck = (taskno) =>{
 
         document.querySelector('.task'+taskno).remove()
         localStorage.removeItem('taskn'+taskno)
-        localStorage.setItem('completedtaskno', completedtaskno)
 
-        ++completedtaskno;
+        let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
+        if(completedcount != 0){
+            localStorage.setItem('completedtask', completedcount)
+
+         // window.location.reload()
+        }
 
         let amount = document.querySelector('.actualdisplaysection').childElementCount ;
 

@@ -10,11 +10,16 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
     if(localStorage.getItem('editedvalue'+i)){ //so that the edited value stays even after reload
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
     }
-}
-let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
-if(completedcount != 0){
-    document.querySelector('.completedtask').textContent = completedcount;
+    //make sure the removed tasks dont stay
+    if(document.querySelector('.task'+i).innerHTML == ''){
+        document.querySelector('.task'+i).remove();
+    }
+    let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
+    if(completedcount != 0){
+        localStorage.setItem('completedtask', completedcount)
 
-    // window.location.reload()
+         
+    }
 }
+
 

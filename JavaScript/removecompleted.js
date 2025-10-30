@@ -6,6 +6,8 @@ const removetask = (taskno) =>{
     localStorage.removeItem('completed'+taskno)
 
     localStorage.setItem('completedtaskno', parseInt(localStorage.getItem('completedtaskno')) - 1)
+    let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
+    localStorage.setItem('completedtask',parseInt(localStorage.getItem('completedtask')) - 1)
 
     window.location.reload()
 }
