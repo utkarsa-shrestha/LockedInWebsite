@@ -2,7 +2,7 @@ const input = document.querySelector('#entertask');
 const submit = document.querySelector('.submit');
 let taskno;
 if(!localStorage.getItem('totaltask') ){
-    taskno = 1; 
+    taskno = 0; 
 }
 else{
     taskno = localStorage.getItem('totaltask')
@@ -13,6 +13,8 @@ else{
 
 
 submit.addEventListener('click', ()=>{
+    //incremented of taskno
+    ++taskno
     //defining all of the elements
 
     document.querySelector('#taskdisplay').style.display = 'block';
@@ -72,18 +74,19 @@ submit.addEventListener('click', ()=>{
     localStorage.setItem('taskn'+taskno, taskn.outerHTML)
     localStorage.setItem('totaltask', taskno)
 
-    //incremented of taskno
-    taskno++
+    
 
     let amount = document.querySelector('.actualdisplaysection').childElementCount ;
 
     localStorage.setItem('taskleft', amount - 1)
     
+    window.location.reload()
    
 })
 
 //so that the tasks still stay even after a reload or afer closing and reopen
 for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
+    
     let savedtask = document.createElement('div')
     savedtask.setAttribute('class', 'task' + i)
     document.querySelector('.actualdisplaysection').append(savedtask)
@@ -91,6 +94,9 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
 
     if(localStorage.getItem('editedvalue'+i)){ //so that the edited value stays even after reload
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
+    }
+    if(document.querySelector('.task'+i).innerHTML == ''){
+        document.querySelector('.task'+i).remove();
     }
 }
 

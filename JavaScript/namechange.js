@@ -16,7 +16,6 @@ const remove =() =>{
         overlay.classList.remove('active', 'closing'); //removing the dimming effect
     }, 300);
 }
-console.log(localStorage.getItem('Name'));
 const changename = () =>{
     let name = document.querySelector('.namechangeinput').value;
     localStorage.setItem('Name', name)
