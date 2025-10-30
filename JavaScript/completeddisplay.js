@@ -17,8 +17,6 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
     let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
     if(completedcount != 0){
         localStorage.setItem('completedtask', completedcount)
-
-         
     }
 }
 
