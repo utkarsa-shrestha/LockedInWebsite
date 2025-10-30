@@ -8,6 +8,7 @@ const removetask = (taskno) => {
 
           let amount = document.querySelector('.actualdisplaysection').childElementCount ;
 
+
         localStorage.setItem('taskleft', amount - 1)
    
     }

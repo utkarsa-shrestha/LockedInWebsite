@@ -78,8 +78,6 @@ submit.addEventListener('click', ()=>{
 
     let amount = document.querySelector('.actualdisplaysection').childElementCount ;
 
-
-
     localStorage.setItem('taskleft', amount - 1)
     
     window.location.reload()

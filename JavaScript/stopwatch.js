@@ -66,7 +66,6 @@ const startfunction = () =>{ //function to start the stopwatch
 const pausefunction = () =>{ //function to pause the stopwatch
     clearInterval(timeinterval)
 
-    console.log("Paused")
 
     document.querySelector('#start').style.display = 'block';
     document.querySelector('#pause').style.display = 'none';
@@ -78,7 +77,6 @@ const endfunction = () =>{
     
     
 
-    console.log('Ended');
 
     clearInterval(timeinterval)
 
@@ -101,6 +99,7 @@ const endfunction = () =>{
     totaltimeinsecond = (totalminuteoutside * 60) + totalsecondoutside;
 
     localStorage.setItem('Timefocused', totaltimeinsecond)
+
 
 
 }

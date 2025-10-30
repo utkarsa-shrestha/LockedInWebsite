@@ -6,8 +6,9 @@ const completecheck = (taskno) =>{
         let completedtask = localStorage.getItem('taskn'+taskno)
         localStorage.setItem('completed'+taskno, completedtask)
         //to remove the task from remove
-
-        document.querySelector('.task'+taskno).remove()
+        
+        document.getElementById(taskno).remove()
+        document.getElementById('task' + taskno).remove()
         localStorage.removeItem('taskn'+taskno)
 
         let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
@@ -23,4 +24,6 @@ const completecheck = (taskno) =>{
    
         
     }, 100)
+
+    // 
 }
