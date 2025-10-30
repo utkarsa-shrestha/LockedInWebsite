@@ -88,6 +88,7 @@ submit.addEventListener('click', ()=>{
 
 //so that the tasks still stay even after a reload or afer closing and reopen
 for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
+    
     let savedtask = document.createElement('div')
     savedtask.setAttribute('class', 'task' + i)
     document.querySelector('.actualdisplaysection').append(savedtask)
@@ -95,6 +96,9 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
 
     if(localStorage.getItem('editedvalue'+i)){ //so that the edited value stays even after reload
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
+    }
+    if(document.querySelector('.task'+i).innerHTML == ''){
+        document.querySelector('.task'+i).remove();
     }
 }
 

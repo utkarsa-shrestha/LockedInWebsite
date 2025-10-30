@@ -11,4 +11,10 @@ for(i=1; i<= parseInt(localStorage.getItem('totaltask')); i++){
         document.getElementById(i).childNodes[1].textContent = localStorage.getItem('editedvalue'+i)
     }
 }
+let completedcount = document.querySelector('.actualdisplaysection').childElementCount;
+if(completedcount != 0){
+    document.querySelector('.completedtask').textContent = completedcount;
+
+    // window.location.reload()
+}
 
