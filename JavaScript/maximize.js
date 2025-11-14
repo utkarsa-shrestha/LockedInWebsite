@@ -4,8 +4,8 @@ const minimizebutton = document.querySelector('.minimize')
 maximizebutton.addEventListener('click', ()=>{
 
     //to hide other elements
-    document.querySelector('.nav1').style.display = 'none';
-    document.querySelector('.nav2').style.display = 'none';
+    // document.querySelector('.nav1').style.display = 'none';
+    // document.querySelector('.nav2').style.display = 'none';
     maximizebutton.style.display = 'none';
     minimizebutton.style.display = 'block'
 
